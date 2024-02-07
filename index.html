@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beep on Spacebar Press</title>
+</head>
+<body>
+    <script>
+        // Function to play beep sound
+        function playBeep() {
+            var beep = new Audio('data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEARKwAABCxAgAEABAAZGF0YU'+Array(1e3).join(123));
+            beep.play();
+        }
+
+        // Event listener for keydown event on the whole document
+        document.addEventListener('keydown', function(event) {
+            if (event.code === 'Space') {
+                playBeep(); // Play beep sound when space bar is pressed
+            }
+        });
+    </script>
+</body>
+</html>
